@@ -1,5 +1,7 @@
 <h1 align='center'> Reactive Coverage of a Large Area with a Satellite Constellation 🛰️ </h1>
 
+<br>
+
 ## **🌍 Context and Objectives:**
 - A constellation of **32 low Earth orbit satellites** is used to monitor **Areas of Interest (AOIs)** on a large scale (countries, regions).  
 - Applications include: **forest fire monitoring, flood observation, illicit activity detection, conflicts**, and more.  
