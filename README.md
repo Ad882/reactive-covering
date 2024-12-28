@@ -70,7 +70,8 @@ To run the provided Python code, you need:
 - Required libraries (install using `pip install -r requirements.txt`):  
   - `matplotlib`  
   - `numpy`  
-  - `docplex`  
+  - `docplex`   
+    ⚠️ DOcplex (IBM Decision Optimization CPLEX Modeling for Python) requires a license, as it is based on the use of IBM CPLEX Optimizer, a commercial product. 
   - `cartopy`  
 
 <br>
