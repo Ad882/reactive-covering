@@ -2,7 +2,7 @@
 
 <br>
 
-## **🌍 Context and Objectives:**
+## **🌍 Context and objectives:**
 - A constellation of **32 low Earth orbit satellites** is used to monitor **Areas of Interest (AOIs)** on a large scale (countries, regions).  
 - Applications include: **forest fire monitoring, flood observation, illicit activity detection, conflicts**, and more.  
 
@@ -13,50 +13,50 @@ The user aims to:
 
 <br>
 
-## **📥 Input Data:**
+## **📥 Input data:**
 The input data is stored in the [data](data) folder:  
 
-1. **Areas of Interest (AOIs):**  
+1. **Areas of Interest (AoIs):**  
    - Geographic characteristics (coordinates, visibility windows).  
    - List of possible accesses for each satellite (date and duration of passage).  
 
-2. **Reactivity Objectives:**  
+2. **Reactivity objectives:**  
    - Ensure deadlines (12h, 4h, 2h) are respected to cover at least one access within a given window.  
    - Three `.json` files in [data](data), each corresponding to one of the reactivity constraints.  
 
-3. **Observation Requests:**  
+3. **Observation requests:**  
    - A request is fulfilled if at least one access is covered during a satellite passage (minimum duration: **30 seconds**).  
 
 <br>
 
-## **🚀 Optimization Problem:**
-- **Decisions to Make:**  
+## **🚀 Optimization problem:**
+- **Decisions to make:**  
   - Select which satellite passages to reserve.  
   - Define the start and end intervals for each reservation.  
 
 - **Constraints:**  
   - Only one reservation per passage.  
 
-- **Criteria to Optimize:**  
+- **Criteria to optimize:**  
   - **Minimize costs** for the user (fixed fees + cost per unit of reserved time).  
   - **Maximize satisfaction** of observation requests.  
 
 <br>
 
-## **🛠️ Project Approach:**
+## **🛠️ Project approach:**
 
 1. **Step 1: Familiarization:**  
    - Analyze the provided data.  
    - Define metrics to evaluate solutions (e.g., total cost, request satisfaction).  
 
-2. **Step 2: Optimization with Full Passages:**  
+2. **Step 2: Optimization with full passages:**  
    - Test a **MILP approach** using DOCPLEX.  
    - Explore heuristic methods (greedy algorithms, metaheuristics).  
 
-3. **Step 3: Optimization with Partial Passages:**  
+3. **Step 3: Optimization with partial passages:**  
    - Select only specific time intervals within passages to reduce costs for the user.  
 
-4. **Step 4: Multi-Criteria Problem:**  
+4. **Step 4: Multi-criteria problem:**  
    - Perform Pareto analysis (**cost vs satisfaction**).  
    - Generate optimal solutions based on multiple criteria.  
 
@@ -73,7 +73,7 @@ To run the provided Python code, you need:
   - `matplotlib`  
   - `numpy`  
   - `docplex`   
-    ⚠️ DOcplex (IBM Decision Optimization CPLEX Modeling for Python) requires a license, as it is based on the use of IBM CPLEX Optimizer, a commercial product. 
+    ⚠️ DOcplex (IBM Decision Optimization CPLEX Modeling for Python) requires a **license**, as it is based on the use of IBM CPLEX Optimizer, a commercial product. 
   - `cartopy`  
 
 <br>
